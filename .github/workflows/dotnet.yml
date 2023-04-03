@@ -29,7 +29,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --collect:"XPlat Code Coverage" /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=lcov.info
+      run: dotnet test --no-build --verbosity normal
     - name : coverlet
       uses: b3b00/coverlet-action@1.1.9
       with:
